@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+    --font-serif: "Amiri", Georgia, serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  .font-book-display {
+    font-family: var(--font-serif);
+  }
+
+  .font-legal-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Print & PDF A4 Book Styling */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm 15mm 16mm 15mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-page-break {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .print-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-cover-page {
+    min-height: 262mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .print-chapter-header {
+    break-before: page;
+    page-break-before: always;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}

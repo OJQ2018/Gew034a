@@ -1,0 +1,6 @@
+{
+  "name": "موسوعة التحضير لامتحان §34a GewO باللغة العربية",
+  "description": "موسوعة تعليمية وكتاب PDF تفاعلي شامل للتحضير لامتحان الكفاءة الأمنية الألماني Sachkundeprüfung im Bewachungsgewerbe gemäß §34a GewO — أكثر من 520 سؤالاً وجواباً مصوراً وقاموساً قانونياً ثنائي اللغة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
